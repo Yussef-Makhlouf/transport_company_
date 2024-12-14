@@ -18,6 +18,7 @@ const testimonials = [
     quote: 'خدمة استثنائية وفريق عمل محترف. قاموا بنقل أثاث منزلي بكل عناية ودقة. أسعارهم معقولة جداً مقارنة بالخدمة الممتازة التي يقدمونها.',
   },
 ]
+import Image from 'next/image';
 
 const Testimonials = () => {
   return (
@@ -38,7 +39,7 @@ const Testimonials = () => {
                 <div className="px-4 py-5 sm:p-6">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <img className="h-12 w-12 rounded-full" src={testimonial.image} alt="" />
+                      <Image className="h-12 w-12 rounded-full" src={testimonial.image} alt="" />
                     </div>
                     <div className="mr-4">
                       <div className="text-lg font-medium text-gray-900">{testimonial.name}</div>
@@ -46,7 +47,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                   <div className="mt-4 text-gray-500">
-                    "{testimonial.quote}"
+                    {testimonial.quote}
                   </div>
                 </div>
               </div>
