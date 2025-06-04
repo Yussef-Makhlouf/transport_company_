@@ -1,57 +1,87 @@
-const testimonials = [
+const movingSteps = [
   {
-    name: 'أحمد محمد',
-    role: 'عميل',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    quote: 'خدمة ممتازة ومهنية عالية. قاموا بنقل أثاث منزلي بعناية فائقة وفي الوقت المحدد. أنصح بهم بشدة.',
+    title: 'التخطيط المسبق لنقل العفش',
+    description: 'قبل البدء في عملية النقل، يجب وضع خطة شاملة تشمل تحديد موعد النقل، تجهيز الأدوات اللازمة، وتقسيم المهام بين فريق العمل. نقدم لك دليلاً شاملاً للتحضير المثالي.',
+    keywords: ['تخطيط نقل العفش', 'تحضير نقل الأثاث', 'جدولة نقل العفش', 'أدوات نقل الأثاث'],
   },
   {
-    name: 'سارة علي',
-    role: 'عميلة',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    quote: 'تجربة رائعة مع هذه الشركة. فريق العمل محترف جداً وودود. سعيدة جداً بخدمتهم وسأتعامل معهم مرة أخرى بالتأكيد.',
+    title: 'تغليف وتعبئة الأثاث',
+    description: 'تعتبر مرحلة التغليف من أهم مراحل نقل العفش. نستخدم مواد تغليف عالية الجودة وأساليب متطورة لحماية أثاثك. تعرف على أفضل طرق التغليف لكل نوع من الأثاث.',
+    keywords: ['تغليف الأثاث', 'حماية العفش', 'مواد تغليف', 'تعبئة الأثاث'],
   },
   {
-    name: 'محمد خالد',
-    role: 'عميل',
-    image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    quote: 'خدمة استثنائية وفريق عمل محترف. قاموا بنقل أثاث منزلي بكل عناية ودقة. أسعارهم معقولة جداً مقارنة بالخدمة الممتازة التي يقدمونها.',
+    title: 'نقل وتفكيك الأثاث',
+    description: 'نمتلك فريقاً محترفاً لتفكيك وإعادة تركيب جميع أنواع الأثاث. نستخدم أحدث المعدات والتقنيات لضمان سلامة أثاثك أثناء النقل.',
+    keywords: ['تفكيك الأثاث', 'تركيب العفش', 'معدات نقل', 'فريق نقل محترف'],
+  },
+  {
+    title: 'النقل الآمن',
+    description: 'نستخدم سيارات مجهزة خصيصاً لنقل العفش مع أنظمة تثبيت متطورة. نضمن وصول أثاثك بحالة ممتازة إلى وجهتك الجديدة.',
+    keywords: ['سيارات نقل', 'نقل آمن', 'تثبيت الأثاث', 'حماية أثناء النقل'],
+  },
+  {
+    title: 'إعادة التركيب والتنظيم',
+    description: 'بعد الوصول، يقوم فريقنا بإعادة تركيب الأثاث وتنظيمه في المكان الجديد. نقدم نصائح لتنظيم منزلك الجديد بشكل مثالي.',
+    keywords: ['تركيب الأثاث', 'تنظيم المنزل', 'ترتيب العفش', 'تنسيق المنزل'],
+  },
+  {
+    title: 'خدمات ما بعد النقل',
+    description: 'نقدم خدمات إضافية مثل تنظيف المنزل القديم والجديد، والتخلص من النفايات، وتركيب الأجهزة الكهربائية. نحن معك في كل خطوة.',
+    keywords: ['تنظيف المنزل', 'تركيب الأجهزة', 'خدمات إضافية', 'رعاية ما بعد النقل'],
   },
 ]
-import Image from 'next/image';
 
-const Testimonials = () => {
+const MovingGuide = () => {
   return (
-    <section className="bg-white py-12 overflow-hidden md:py-20 lg:py-24">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative">
-          <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            ماذا يقول عملاؤنا
+    <section className="bg-white py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-4xl font-extrabold text-[#8f1332] sm:text-5xl">
+            دليل شامل لنقل العفش في جدة
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-            نحن فخورون بما يقوله عملاؤنا عن خدماتنا. إليكم بعض الشهادات من عملائنا السعداء.
+          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+            اكتشف أفضل الطرق والممارسات لنقل أثاثك بأمان وكفاءة. نقدم لك دليلاً شاملاً لكل مرحلة من مراحل عملية النقل.
           </p>
         </div>
-        <div className="mt-20">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.name} className="bg-white overflow-hidden shadow rounded-lg">
-                <div className="px-4 py-5 sm:p-6">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <Image className="h-12 w-12 rounded-full" src={testimonial.image} alt="" />
-                    </div>
-                    <div className="mr-4">
-                      <div className="text-lg font-medium text-gray-900">{testimonial.name}</div>
-                      <div className="text-sm text-gray-500">{testimonial.role}</div>
-                    </div>
-                  </div>
-                  <div className="mt-4 text-gray-500">
-                    {testimonial.quote}
-                  </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {movingSteps.map((step, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105">
+              <div className="p-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#8f1332]/10 text-[#8f1332] mb-4">
+                  <span className="text-xl font-bold">{index + 1}</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#8f1332] mb-3">{step.title}</h3>
+                <p className="text-gray-600 mb-4">{step.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {step.keywords.map((keyword, idx) => (
+                    <span key={idx} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[#8f1332]/10 text-[#8f1332]">
+                      {keyword}
+                    </span>
+                  ))}
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-bold text-[#8f1332] mb-4">
+            لماذا تختار خدماتنا لنقل العفش في جدة؟
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h4 className="text-lg font-semibold text-[#8f1332] mb-2">خبرة واسعة</h4>
+              <p className="text-gray-600">فريق محترف مع سنوات من الخبرة في نقل العفش</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h4 className="text-lg font-semibold text-[#8f1332] mb-2">أدوات متطورة</h4>
+              <p className="text-gray-600">استخدام أحدث المعدات والتقنيات في عملية النقل</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h4 className="text-lg font-semibold text-[#8f1332] mb-2">ضمان الجودة</h4>
+              <p className="text-gray-600">التزام تام بسلامة أثاثك ورضا العملاء</p>
+            </div>
           </div>
         </div>
       </div>
@@ -59,5 +89,5 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export default MovingGuide
 
